@@ -6,13 +6,19 @@ FABRIC:
         DC1_SPINES:
           hosts:
             spine_1:
+              ansible_host: 172.100.100.11
             spine_2:
+              ansible_host: 172.100.100.12
         DC1_LEAFS:
           hosts:
             leaf_1a:
+              ansible_host: 172.100.100.13
             leaf_1b:
+              ansible_host: 172.100.100.14
             leaf_2a:
+              ansible_host: 172.100.100.15
             leaf_2b:
+              ansible_host: 172.100.100.16
     DC1_NETWORK_SERVICES:
       children:
         DC1_LEAFS:
