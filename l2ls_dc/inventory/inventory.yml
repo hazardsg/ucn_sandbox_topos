@@ -1,0 +1,31 @@
+---
+all:
+  children:
+    eos:
+      children:
+        lab:
+          hosts:
+            SPINE:
+              ansible_host: 127.0.0.1
+              ansible_port: 22010
+              ansible_httpapi_port: 44300
+            LEAF-1:
+              ansible_host: 127.0.0.1
+              ansible_port: 22001
+              ansible_httpapi_port: 44301
+            LEAF-2:
+              ansible_host: 127.0.0.1
+              ansible_port: 22002
+              ansible_httpapi_port: 44302
+            LEAF-3:
+              ansible_host: 127.0.0.1
+              ansible_port: 22003
+              ansible_httpapi_port: 44303
+            LEAF-4:
+              ansible_host: 127.0.0.1
+              ansible_port: 22004
+              ansible_httpapi_port: 44304
+            FW:
+              ansible_host: 127.0.0.1
+              ansible_port: 22005
+              ansible_httpapi_port: 44305
