@@ -1,0 +1,23 @@
+# inventory.yml
+FABRIC:
+  children:
+    DC1:
+      children:
+        DC1_SPINES:
+          hosts:
+            spine_1:
+            spine_2:
+        DC1_LEAFS:
+          hosts:
+            leaf_1a:
+            leaf_1b:
+            leaf_2a:
+            leaf_2b:
+    DC1_NETWORK_SERVICES:
+      children:
+        DC1_LEAFS:
+        DC1_SPINES:
+    DC1_ENDPOINTS:
+      children:
+        DC1_LEAFS:
+        DC1_SPINES:
