@@ -1,0 +1,88 @@
+{
+  "freeTextAnnotations": [],
+  "freeShapeAnnotations": [],
+  "groupStyleAnnotations": [],
+  "cloudNodeAnnotations": [],
+  "nodeAnnotations": [
+    {
+      "id": "ceos1",
+      "icon": "router",
+      "position": {
+        "x": 105,
+        "y": 105
+      },
+      "geoCoordinates": {
+        "lat": 48.684826888402256,
+        "lng": 9.007895390625677
+      }
+    },
+    {
+      "id": "ceos2",
+      "icon": "router",
+      "position": {
+        "x": 175,
+        "y": 105
+      },
+      "geoCoordinates": {
+        "lat": 48.684826888402256,
+        "lng": 9.007895390625677
+      }
+    },
+    {
+      "id": "ceos3",
+      "icon": "switch",
+      "position": {
+        "x": 35,
+        "y": 189
+      },
+      "geoCoordinates": {
+        "lat": 48.684826888402256,
+        "lng": 9.107895390625677
+      }
+    },
+    {
+      "id": "ceos4",
+      "icon": "switch",
+      "position": {
+        "x": 105,
+        "y": 189
+      },
+      "geoCoordinates": {
+        "lat": 48.88482688840226,
+        "lng": 9.307895390625678
+      }
+    },
+    {
+      "id": "ceos5",
+      "icon": "switch",
+      "position": {
+        "x": 175,
+        "y": 189
+      }
+    },
+    {
+      "id": "ceos6",
+      "icon": "switch",
+      "position": {
+        "x": 245,
+        "y": 189
+      }
+    },
+    {
+      "id": "host1",
+      "icon": "client",
+      "position": {
+        "x": 77,
+        "y": 259
+      }
+    },
+    {
+      "id": "host2",
+      "icon": "client",
+      "position": {
+        "x": 203,
+        "y": 259
+      }
+    }
+  ]
+}

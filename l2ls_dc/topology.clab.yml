@@ -1,0 +1,91 @@
+---
+name: sandbox-template
+prefix: ""
+
+mgmt:
+  network: custom_mgmt
+  ipv4-subnet: 172.100.100.0/24
+
+topology:
+
+  defaults:
+    env:
+      INTFTYPE: et
+    kind: ceos
+
+  kinds:
+    ceos:
+      image: arista/ceos:latest
+    linux:
+      image: ghcr.io/aristanetworks/aclabs/host-ubuntu:rev1.1
+
+  nodes:
+    host1:
+      kind: linux
+      env:
+        IPV4: 10.10.10.10/24
+        STATIC_ROUTE: 10.0.0.0/8
+        GW: 10.10.10.1
+        UPLINK_MAC: 00:00:00:00:00:01
+        TMODE: lacp
+    host2:
+      kind: linux
+      env:
+        IPV4: 10.20.20.20/24
+        STATIC_ROUTE: 10.0.0.0/8
+        GW: 10.20.20.1
+        UPLINK_MAC: 00:00:00:00:00:02
+        TMODE: lacp
+    leaf_1a:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    spine_1:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    spine_2:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    leaf_1b:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    leaf_2b:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    ceos1:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    ceos2:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    ceos3:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    ceos4:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    ceos5:
+      kind: arista_ceos
+      image: arista/ceos:latest
+    ceos6:
+      kind: arista_ceos
+      image: arista/ceos:latest
+
+  links:
+    - endpoints: [ "spine_1:et1", "spine_2:et1" ]
+    - endpoints: [ "spine_1:et2", "spine_2:et2" ]
+    - endpoints: [ "leaf_1a:et1", "leaf_1b:et1" ]
+    - endpoints: [ "leaf_1a:et2", "leaf_1b:et2" ]
+    - endpoints: [ "leaf_2b:et1", "leaf_2b:et1" ]
+    - endpoints: [ "leaf_2b:et2", "leaf_2b:et2" ]
+    - endpoints: [ "spine_1:et3", "leaf_1a:et3" ]
+    - endpoints: [ "spine_1:et4", "leaf_1b:et3" ]
+    - endpoints: [ "spine_1:et5", "leaf_2b:et3" ]
+    - endpoints: [ "spine_1:et6", "leaf_2b:et3" ]
+    - endpoints: [ "spine_2:et3", "leaf_1a:et4" ]
+    - endpoints: [ "spine_2:et4", "leaf_1b:et4" ]
+    - endpoints: [ "spine_2:et5", "leaf_2b:et4" ]
+    - endpoints: [ "spine_2:et6", "leaf_2b:et4" ]
+    - endpoints: [ "leaf_1a:et5", "host1:eth1" ]
+    - endpoints: [ "leaf_1b:et5", "host1:eth2" ]
+    - endpoints: [ "leaf_2b:et5", "host2:eth1" ]
+    - endpoints: [ "leaf_2b:et5", "host2:eth2" ]
