@@ -14,9 +14,9 @@ l2spine:
   node_groups:
     - group: SPINES
       nodes:
-        - name: SPINE1
+        - name: spine_1
           id: 1
           mgmt_ip: 172.100.100.11/24
-        - name: SPINE2
+        - name: spine_2
           id: 2
           mgmt_ip: 172.100.100.12/24
