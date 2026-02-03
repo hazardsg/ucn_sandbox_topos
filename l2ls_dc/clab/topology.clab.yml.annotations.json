@@ -5,11 +5,11 @@
   "cloudNodeAnnotations": [],
   "nodeAnnotations": [
     {
-      "id": "leaf_2b",
+      "id": "SPINE_1",
       "icon": "router",
       "position": {
-        "x": 119,
-        "y": 49
+        "x": 105,
+        "y": 105
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -17,11 +17,11 @@
       }
     },
     {
-      "id": "leaf_2a",
+      "id": "SPINE_2",
       "icon": "router",
       "position": {
-        "x": 35,
-        "y": 49
+        "x": 203,
+        "y": 105
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -29,11 +29,11 @@
       }
     },
     {
-      "id": "leaf_1b",
+      "id": "LEAF_1A",
       "icon": "router",
       "position": {
-        "x": -49,
-        "y": 49
+        "x": 7,
+        "y": 203
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -41,11 +41,11 @@
       }
     },
     {
-      "id": "leaf_1a",
+      "id": "LEAF_1B",
       "icon": "router",
       "position": {
-        "x": -133,
-        "y": 49
+        "x": 105,
+        "y": 203
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -53,11 +53,11 @@
       }
     },
     {
-      "id": "spine_2",
+      "id": "LEAF_2A",
       "icon": "router",
       "position": {
-        "x": 35,
-        "y": -49
+        "x": 203,
+        "y": 203
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -65,11 +65,11 @@
       }
     },
     {
-      "id": "spine_1",
+      "id": "LEAF_2B",
       "icon": "router",
       "position": {
-        "x": -49,
-        "y": -49
+        "x": 301,
+        "y": 203
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -77,19 +77,27 @@
       }
     },
     {
-      "id": "host1",
-      "icon": "client",
+      "id": "HOST1",
+      "icon": "router",
       "position": {
-        "x": -91,
-        "y": 119
+        "x": 105,
+        "y": 301
+      },
+      "geoCoordinates": {
+        "lat": 48.684826888402256,
+        "lng": 9.007895390625677
       }
     },
     {
-      "id": "host2",
-      "icon": "client",
+      "id": "HOST2",
+      "icon": "router",
       "position": {
-        "x": 77,
-        "y": 119
+        "x": 203,
+        "y": 301
+      },
+      "geoCoordinates": {
+        "lat": 48.684826888402256,
+        "lng": 9.007895390625677
       }
     }
   ],

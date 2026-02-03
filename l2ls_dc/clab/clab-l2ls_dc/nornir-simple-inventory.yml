@@ -1,0 +1,41 @@
+---
+LEAF_1A:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.100.100.13
+LEAF_1B:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.100.100.14
+LEAF_2A:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.100.100.15
+LEAF_2B:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.100.100.16
+SPINE_1:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.100.100.11
+SPINE_2:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 172.100.100.12
+HOST1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.100.100.17
+HOST2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 172.100.100.18

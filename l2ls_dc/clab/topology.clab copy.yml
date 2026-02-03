@@ -3,7 +3,7 @@ name: l2ls_dc
 prefix: ""
 
 mgmt:
-  network: mgmt
+  network: custom_mgmt
   ipv4-subnet: 172.100.100.0/24
 
 topology:
@@ -11,6 +11,7 @@ topology:
   defaults:
     env:
       INTFTYPE: et
+    kind: ceos
 
   kinds:
     ceos:
@@ -23,43 +24,43 @@ topology:
       kind: arista_ceos
       image: arista/ceos:latest
       mgmt-ipv4: 172.100.100.11
-      # binds:
-      #   - sn/spine_1.txt:/mnt/flash/ceos-config:ro
+      binds:
+        - sn/spine_1.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/SPINE_1.cfg
     SPINE_2:
       kind: arista_ceos
       image: arista/ceos:latest
       mgmt-ipv4: 172.100.100.12
-      # binds:
-      #   - sn/spine_2.txt:/mnt/flash/ceos-config:ro
+      binds:
+        - sn/spine_2.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/SPINE_2.cfg
     LEAF_1A:
       kind: arista_ceos
       image: arista/ceos:latest
       mgmt-ipv4: 172.100.100.13
-      # binds:
-      #   - sn/leaf_1a.txt:/mnt/flash/ceos-config:ro
+      binds:
+        - sn/leaf_1a.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/LEAF_1A.cfg
     LEAF_1B:
       kind: arista_ceos
       image: arista/ceos:latest
       mgmt-ipv4: 172.100.100.14
-      # binds:
-      #   - sn/leaf_1b.txt:/mnt/flash/ceos-config:ro
+      binds:
+        - sn/leaf_1b.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/LEAF_1B.cfg
     LEAF_2A:
       kind: arista_ceos
       image: arista/ceos:latest
       mgmt-ipv4: 172.100.100.15
-      # binds:
-      #   - sn/leaf_2a.txt:/mnt/flash/ceos-config:ro
+      binds:
+        - sn/leaf_2a.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/LEAF_2A.cfg
     LEAF_2B:
       kind: arista_ceos
       image: arista/ceos:latest
       mgmt-ipv4: 172.100.100.16
-      # binds:
-      #   - sn/leaf_2b.txt:/mnt/flash/ceos-config:ro
+      binds:
+        - sn/leaf_2b.txt:/mnt/flash/ceos-config:ro
       startup-config: init-configs/LEAF_2B.cfg
     HOST1:
       kind: linux
