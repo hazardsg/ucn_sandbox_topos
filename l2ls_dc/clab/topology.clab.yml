@@ -74,10 +74,28 @@ topology:
       kind: linux
       mgmt-ipv4: 172.100.100.18
       env:
-        IPV4: 10.10.10.102/24
+        IPV4: 10.20.20.102/24
+        STATIC_ROUTE: 10.0.0.0/8
+        GW: 10.20.20.1
+        UPLINK_MAC: 00:01:01:00:00:02
+        TMODE: lacp
+    HOST3:
+      kind: linux
+      mgmt-ipv4: 172.100.100.19
+      env:
+        IPV4: 10.10.10.103/24
         STATIC_ROUTE: 10.0.0.0/8
         GW: 10.10.10.1
-        UPLINK_MAC: 00:01:01:00:00:02
+        UPLINK_MAC: 00:01:01:00:00:03
+        TMODE: lacp
+    HOST4:
+      kind: linux
+      mgmt-ipv4: 172.100.100.20
+      env:
+        IPV4: 10.30.30.104/24
+        STATIC_ROUTE: 10.0.0.0/8
+        GW: 10.30.30.1
+        UPLINK_MAC: 00:01:01:00:00:04
         TMODE: lacp
 
   links:
@@ -97,5 +115,9 @@ topology:
     - endpoints: [ "SPINE_2:et6", "LEAF_2B:et4" ]
     - endpoints: [ "LEAF_1A:et5", "HOST1:eth1" ]
     - endpoints: [ "LEAF_1B:et5", "HOST1:eth2" ]
-    - endpoints: [ "LEAF_2A:et5", "HOST2:eth1" ]
-    - endpoints: [ "LEAF_2B:et5", "HOST2:eth2" ]
+    - endpoints: [ "LEAF_1A:et6", "HOST2:eth1" ]
+    - endpoints: [ "LEAF_1B:et6", "HOST2:eth2" ]
+    - endpoints: [ "LEAF_2A:et5", "HOST3:eth1" ]
+    - endpoints: [ "LEAF_2B:et5", "HOST3:eth2" ]
+    - endpoints: [ "LEAF_2A:et6", "HOST4:eth1" ]
+    - endpoints: [ "LEAF_2B:et6", "HOST4:eth2" ]

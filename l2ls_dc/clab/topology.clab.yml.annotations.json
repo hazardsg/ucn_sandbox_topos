@@ -8,7 +8,7 @@
       "id": "SPINE_1",
       "icon": "router",
       "position": {
-        "x": 100,
+        "x": 60,
         "y": 40
       },
       "geoCoordinates": {
@@ -20,7 +20,7 @@
       "id": "SPINE_2",
       "icon": "router",
       "position": {
-        "x": 200,
+        "x": 220,
         "y": 40
       },
       "geoCoordinates": {
@@ -80,7 +80,7 @@
       "id": "HOST1",
       "icon": "server",
       "position": {
-        "x": 100,
+        "x": 0,
         "y": 360
       },
       "geoCoordinates": {
@@ -93,14 +93,176 @@
       "id": "HOST2",
       "icon": "server",
       "position": {
-        "x": 200,
+        "x": 100,
         "y": 360
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
         "lng": 9.007895390625677
       }
+    },
+    {
+      "id": "HOST4",
+      "position": {
+        "x": 300,
+        "y": 360
+      },
+      "icon": "server"
+    },
+    {
+      "id": "HOST3",
+      "position": {
+        "x": 200,
+        "y": 360
+      },
+      "icon": "server"
     }
   ],
-  "aliasEndpointAnnotations": []
+  "aliasEndpointAnnotations": [],
+  "edgeAnnotations": [
+    {
+      "id": "Clab-Link12",
+      "source": "SPINE_2",
+      "target": "LEAF_2A",
+      "sourceEndpoint": "et5",
+      "targetEndpoint": "et4",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 30
+    },
+    {
+      "id": "Clab-Link13",
+      "source": "SPINE_2",
+      "target": "LEAF_2B",
+      "sourceEndpoint": "et6",
+      "targetEndpoint": "et4",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 32
+    },
+    {
+      "id": "Clab-Link11",
+      "source": "SPINE_2",
+      "target": "LEAF_1B",
+      "sourceEndpoint": "et4",
+      "targetEndpoint": "et4",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 33
+    },
+    {
+      "id": "Clab-Link10",
+      "source": "SPINE_2",
+      "target": "LEAF_1A",
+      "sourceEndpoint": "et3",
+      "targetEndpoint": "et4",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 46
+    },
+    {
+      "id": "Clab-Link6",
+      "source": "SPINE_1",
+      "target": "LEAF_1A",
+      "sourceEndpoint": "et3",
+      "targetEndpoint": "et3",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 34
+    },
+    {
+      "id": "Clab-Link7",
+      "source": "SPINE_1",
+      "target": "LEAF_1B",
+      "sourceEndpoint": "et4",
+      "targetEndpoint": "et3",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 30
+    },
+    {
+      "id": "Clab-Link8",
+      "source": "SPINE_1",
+      "target": "LEAF_2A",
+      "sourceEndpoint": "et5",
+      "targetEndpoint": "et3",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 33
+    },
+    {
+      "id": "Clab-Link9",
+      "source": "SPINE_1",
+      "target": "LEAF_2B",
+      "sourceEndpoint": "et6",
+      "targetEndpoint": "et3",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 52
+    },
+    {
+      "id": "Clab-Link14",
+      "source": "LEAF_1A",
+      "target": "HOST1",
+      "sourceEndpoint": "et5",
+      "targetEndpoint": "eth1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 30
+    },
+    {
+      "id": "Clab-Link16",
+      "source": "LEAF_1A",
+      "target": "HOST2",
+      "sourceEndpoint": "et6",
+      "targetEndpoint": "eth1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 35
+    },
+    {
+      "id": "Clab-Link15",
+      "source": "LEAF_1B",
+      "target": "HOST1",
+      "sourceEndpoint": "et5",
+      "targetEndpoint": "eth2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 36
+    },
+    {
+      "id": "Clab-Link17",
+      "source": "LEAF_1B",
+      "target": "HOST2",
+      "sourceEndpoint": "et6",
+      "targetEndpoint": "eth2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 29
+    },
+    {
+      "id": "Clab-Link18",
+      "source": "LEAF_2A",
+      "target": "HOST3",
+      "sourceEndpoint": "et5",
+      "targetEndpoint": "eth1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 30
+    },
+    {
+      "id": "Clab-Link21",
+      "source": "LEAF_2B",
+      "target": "HOST4",
+      "sourceEndpoint": "et6",
+      "targetEndpoint": "eth2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 30
+    },
+    {
+      "id": "Clab-Link19",
+      "source": "LEAF_2B",
+      "target": "HOST3",
+      "sourceEndpoint": "et5",
+      "targetEndpoint": "eth2",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 37
+    },
+    {
+      "id": "Clab-Link20",
+      "source": "LEAF_2A",
+      "target": "HOST4",
+      "sourceEndpoint": "et6",
+      "targetEndpoint": "eth1",
+      "endpointLabelOffsetEnabled": true,
+      "endpointLabelOffset": 37
+    }
+  ]
 }

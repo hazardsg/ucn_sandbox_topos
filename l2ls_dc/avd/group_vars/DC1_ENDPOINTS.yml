@@ -32,11 +32,29 @@ servers:
         port_channel:
           mode: active
   - name: Host2
+    rack: RACK1
+    adapters:
+      - endpoint_ports: [Eth1, Eth2]
+        switch_ports: [Ethernet6, Ethernet6]
+        switches: [LEAF_1A, LEAF_1B]
+        profile: PP-GREEN
+        port_channel:
+          mode: active
+  - name: Host3
     rack: RACK2
     adapters:
       - endpoint_ports: [Eth1, Eth2]
         switch_ports: [Ethernet5, Ethernet5]
         switches: [LEAF_2A, LEAF_2B]
         profile: PP-BLUE
+        port_channel:
+          mode: active
+  - name: Host4
+    rack: RACK2
+    adapters:
+      - endpoint_ports: [Eth1, Eth2]
+        switch_ports: [Ethernet6, Ethernet6]
+        switches: [LEAF_2A, LEAF_2B]
+        profile: PP-ORANGE
         port_channel:
           mode: active
