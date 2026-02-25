@@ -1,5 +1,66 @@
 {
-  "freeTextAnnotations": [],
+  "freeTextAnnotations": [
+    {
+      "id": "freeText_1772049239016",
+      "text": "10.10.10.101/24",
+      "position": {
+        "x": -30.494107593563204,
+        "y": 406.22649568114656
+      },
+      "fontSize": 12,
+      "fontColor": "#3b3b3b",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1772049261327",
+      "text": "10.20.20.102/24",
+      "position": {
+        "x": 69.15589981049834,
+        "y": 406.36645355671413
+      },
+      "fontSize": 12,
+      "fontColor": "#3b3b3b",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1772049287072",
+      "text": "10.10.10.103/24",
+      "position": {
+        "x": 172.1648962281799,
+        "y": 406.9262850589841
+      },
+      "fontSize": 12,
+      "fontColor": "#3b3b3b",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    },
+    {
+      "id": "freeText_1772049303057",
+      "text": "10.30.30.104/24",
+      "position": {
+        "x": 272.3747351345114,
+        "y": 406.3664535567141
+      },
+      "fontSize": 12,
+      "fontColor": "#3b3b3b",
+      "fontWeight": "normal",
+      "fontStyle": "normal",
+      "textDecoration": "none",
+      "textAlign": "left",
+      "fontFamily": "Arial"
+    }
+  ],
   "freeShapeAnnotations": [],
   "groupStyleAnnotations": [],
   "cloudNodeAnnotations": [],
