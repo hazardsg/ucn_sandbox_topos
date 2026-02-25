@@ -78,7 +78,7 @@
     },
     {
       "id": "HOST1",
-      "icon": "router",
+      "icon": "server",
       "position": {
         "x": 100,
         "y": 360
@@ -86,11 +86,12 @@
       "geoCoordinates": {
         "lat": 48.684826888402256,
         "lng": 9.007895390625677
-      }
+      },
+      "iconCornerRadius": 0
     },
     {
       "id": "HOST2",
-      "icon": "router",
+      "icon": "server",
       "position": {
         "x": 200,
         "y": 360
