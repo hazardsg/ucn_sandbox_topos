@@ -1,0 +1,60 @@
+---
+### group_vars/DC1_ENDPOINTS.yml
+
+connected_endpoints_keys:
+  - key: servers
+    type: server
+
+port_profiles:
+  - profile: PP-DEFAULTS
+    spanning_tree_portfast: edge
+  - profile: PP-BLUE
+    mode: access
+    vlans: "10"
+    parent_profile: PP-DEFAULTS
+  - profile: PP-GREEN
+    mode: access
+    vlans: "20"
+    parent_profile: PP-DEFAULTS
+  - profile: PP-ORANGE
+    mode: access
+    vlans: "30"
+    parent_profile: PP-DEFAULTS
+
+servers:
+  - name: Host1
+    rack: RACK1
+    adapters:
+      - endpoint_ports: [Eth1, Eth2]
+        switch_ports: [Ethernet5, Ethernet5]
+        switches: [LEAF_1A, LEAF_1B]
+        profile: PP-BLUE
+        port_channel:
+          mode: active
+  - name: Host2
+    rack: RACK1
+    adapters:
+      - endpoint_ports: [Eth1, Eth2]
+        switch_ports: [Ethernet6, Ethernet6]
+        switches: [LEAF_1A, LEAF_1B]
+        profile: PP-GREEN
+        port_channel:
+          mode: active
+  - name: Host3
+    rack: RACK2
+    adapters:
+      - endpoint_ports: [Eth1, Eth2]
+        switch_ports: [Ethernet5, Ethernet5]
+        switches: [LEAF_2A, LEAF_2B]
+        profile: PP-BLUE
+        port_channel:
+          mode: active
+  - name: Host4
+    rack: RACK2
+    adapters:
+      - endpoint_ports: [Eth1, Eth2]
+        switch_ports: [Ethernet6, Ethernet6]
+        switches: [LEAF_2A, LEAF_2B]
+        profile: PP-ORANGE
+        port_channel:
+          mode: active
