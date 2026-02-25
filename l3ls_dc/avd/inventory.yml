@@ -22,8 +22,6 @@ FABRIC:
     DC1_NETWORK_SERVICES:
       children:
         DC1_LEAFS:
-        DC1_SPINES:
     DC1_ENDPOINTS:
       children:
         DC1_LEAFS:
-        DC1_SPINES:

@@ -99,8 +99,6 @@ topology:
         TMODE: lacp
 
   links:
-    - endpoints: [ "SPINE_1:et1", "SPINE_2:et1" ]
-    - endpoints: [ "SPINE_1:et2", "SPINE_2:et2" ]
     - endpoints: [ "LEAF_1A:et1", "LEAF_1B:et1" ]
     - endpoints: [ "LEAF_1A:et2", "LEAF_1B:et2" ]
     - endpoints: [ "LEAF_2A:et1", "LEAF_2B:et1" ]

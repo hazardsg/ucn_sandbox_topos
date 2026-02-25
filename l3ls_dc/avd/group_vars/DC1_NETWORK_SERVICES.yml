@@ -3,40 +3,40 @@
 
 tenants:
   - name: MY_FABRIC
+    # Number used to generate the VNI of each VLAN by adding the VLAN number in this tenant.
+    mac_vrf_vni_base: 10000
     vrfs:
-      - name: default
-        vrf_id: 10
+      # VRF definitions inside the tenant.
+      - name: VRF10
+        # VRF VNI definition.
+        vrf_vni: 10
+        # Enable VTEP Network diagnostics
+        # This will create a loopback with virtual source-nat enable to perform diagnostics from the switch.
+        vtep_diagnostic:
+          # Loopback interface number
+          loopback: 10
+          # Loopback ip range, a unique ip is derived from this ranged and assigned
+          # to each l3 leaf based on it's unique id.
+          loopback_ip_range: 10.255.10.0/27
         svis:
+          # SVI definitions.
           - id: 10
-            name: 'BLUE-NET'
-            tags: [bluezone]
+            # SVI Description
+            name: VRF10_VLAN10
             enabled: true
-            ip_virtual_router_addresses:
-              - 10.10.10.1
-            nodes:
-              - node: SPINE_1
-                ip_address: 10.10.10.2/24
-              - node: SPINE_2
-                ip_address: 10.10.10.3/24
+            # IP anycast gateway to be used in the SVI in every leaf.
+            ip_address_virtual: 10.10.10.1/24
+      - name: VRF11
+        vrf_vni: 11
+        vtep_diagnostic:
+          loopback: 11
+          loopback_ip_range: 10.255.11.0/27
+        svis:
           - id: 20
-            name: 'GREEN-NET'
-            tags: [greenzone]
+            name: VRF11_VLAN20
             enabled: true
-            ip_virtual_router_addresses:
-              - 10.20.20.1
-            nodes:
-              - node: SPINE_1
-                ip_address: 10.20.20.2/24
-              - node: SPINE_2
-                ip_address: 10.20.20.3/24
+            ip_address_virtual: 10.00.20.1/24
           - id: 30
-            name: 'ORANGE-NET'
-            tags: [orangezone]
+            name: VRF11_VLAN30
             enabled: true
-            ip_virtual_router_addresses:
-              - 10.30.30.1
-            nodes:
-              - node: SPINE_1
-                ip_address: 10.30.30.2/24
-              - node: SPINE_2
-                ip_address: 10.30.30.3/24
+            ip_address_virtual: 10.30.30.1/24
