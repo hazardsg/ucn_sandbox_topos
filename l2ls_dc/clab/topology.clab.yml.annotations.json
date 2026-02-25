@@ -8,8 +8,8 @@
       "id": "SPINE_1",
       "icon": "router",
       "position": {
-        "x": 105,
-        "y": 105
+        "x": 100,
+        "y": 40
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -20,8 +20,8 @@
       "id": "SPINE_2",
       "icon": "router",
       "position": {
-        "x": 203,
-        "y": 105
+        "x": 200,
+        "y": 40
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -80,8 +80,8 @@
       "id": "HOST1",
       "icon": "router",
       "position": {
-        "x": 105,
-        "y": 301
+        "x": 100,
+        "y": 360
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,
@@ -92,8 +92,8 @@
       "id": "HOST2",
       "icon": "router",
       "position": {
-        "x": 203,
-        "y": 301
+        "x": 200,
+        "y": 360
       },
       "geoCoordinates": {
         "lat": 48.684826888402256,

@@ -8,7 +8,7 @@ l2leaf:
   defaults:
     platform: cEOSLab
     mlag_peer_ipv4_pool: 192.168.0.0/24
-    uplink_switches: [spine_1, spine_2]
+    uplink_switches: [SPINE_1, SPINE_2]
     uplink_interfaces: [Ethernet3, Ethernet4]
     mlag_interfaces: [Ethernet1, Ethernet2]
     spanning_tree_mode: mstp
@@ -20,11 +20,11 @@ l2leaf:
       filter:
         tags: [bluezone, greenzone]
       nodes:
-        - name: leaf_1a
+        - name: LEAF_1A
           id: 1
           mgmt_ip: 172.100.100.13/24
           uplink_switch_interfaces: [Ethernet3, Ethernet3]
-        - name: leaf_1b
+        - name: LEAF_1B
           id: 2
           mgmt_ip: 172.100.100.14/24
           uplink_switch_interfaces: [Ethernet4, Ethernet4]
@@ -33,11 +33,11 @@ l2leaf:
       filter:
         tags: [bluezone, orangezone]
       nodes:
-        - name: leaf_2a
+        - name: LEAF_2A
           id: 3
           mgmt_ip: 172.100.100.15/24
           uplink_switch_interfaces: [Ethernet5, Ethernet5]
-        - name: leaf_2b
+        - name: LEAF_2B
           id: 4
           mgmt_ip: 172.100.100.16/24
           uplink_switch_interfaces: [Ethernet6, Ethernet6]

@@ -24,15 +24,14 @@ ntp_settings:
 # AAA settings
 aaa_settings:
   local_users:
-    - name: admin
-      privilege: 15
-      role: network-admin
-      sha512_password: "{{ ansible_password | password_hash(salt='admin') }}"
-
     - name: arista
       privilege: 15
       role: network-admin
-      sha512_password: "{{ ansible_password | password_hash(salt='admin') }}"
+      sha512_password: $6$Ap6u4I1WR/jMoNKe$LPLoHgIXFg5kiGPDWGF0w5lVVuOZZ4T15cIBbNxE2ykqh98uVvsi9jPdybkbTXBTZFzi3haaPJVaGVwnpuck40
+    - name: admin
+      privilege: 15
+      role: network-admin
+      sha512_password: $6$eucN5ngreuExDgwS$xnD7T8jO..GBDX0DUlp.hn.W7yW94xTjSanqgaQGBzPIhDAsyAl9N4oScHvOMvf07uVBFI4mKMxwdVEUVKgY/.
 
   # Establish exec/enable role when logging in to switch
   authorization:

@@ -3,13 +3,40 @@
 
 tenants:
   - name: MY_FABRIC
-    l2vlans:
-      - id: 10
-        name: 'BLUE-NET'
-        tags: [bluezone]
-      - id: 20
-        name: 'GREEN-NET'
-        tags: [greenzone]
-      - id: 30
-        name: 'ORANGE-NET'
-        tags: [orangezone]
+    vrfs:
+      - name: default
+        vrf_id: 10
+        svis:
+          - id: 10
+            name: 'BLUE-NET'
+            tags: [bluezone]
+            enabled: true
+            ip_virtual_router_addresses:
+              - 10.10.10.1
+            nodes:
+              - node: SPINE1
+                ip_address: 10.10.10.2/24
+              - node: SPINE2
+                ip_address: 10.10.10.3/24
+          - id: 20
+            name: 'GREEN-NET'
+            tags: [greenzone]
+            enabled: true
+            ip_virtual_router_addresses:
+              - 10.20.20.1
+            nodes:
+              - node: SPINE1
+                ip_address: 10.20.20.2/24
+              - node: SPINE2
+                ip_address: 10.20.20.3/24
+          - id: 30
+            name: 'ORANGE-NET'
+            tags: [orangezone]
+            enabled: true
+            ip_virtual_router_addresses:
+              - 10.30.30.1
+            nodes:
+              - node: SPINE1
+                ip_address: 10.30.30.2/24
+              - node: SPINE2
+                ip_address: 10.30.30.3/24
