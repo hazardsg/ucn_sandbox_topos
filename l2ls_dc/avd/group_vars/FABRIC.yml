@@ -14,6 +14,14 @@ dns_settings:
     - ip_address: 8.8.4.4
     - ip_address: 8.8.8.8
 
+custom_platform_settings:
+  - platforms:
+      - CEOS
+      - cEOS
+      - ceos
+      - cEOSLab
+    management_interface: Management0
+
 # NTP Servers IP or DNS name, first NTP server will be preferred, and sourced from Management VRF
 ntp_settings:
   server_vrf: use_mgmt_interface_vrf
